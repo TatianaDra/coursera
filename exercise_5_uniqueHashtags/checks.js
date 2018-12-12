@@ -5,10 +5,10 @@ var assert = require('assert');
 var normalizeHashTags = require('./index.js');
 
 assert.deepEqual(
-    normalizeHashTags(['web', 'Web', 'WEB', 'web', 'kkk', 'KKK', 'Kkk']),
-    'web, kkk'//,
-    //'Список "web, coursera, JavaScript, Coursera, script, programming"' +
-    //' содержит хэштеги "web, coursera, javascript, script, programming"'
+    normalizeHashTags(['web', 'coursera', 'JavaScript', 'Coursera', 'script', 'programming']),
+    'web, coursera, javascript, script, programming',
+    'Список "web, coursera, JavaScript, Coursera, script, programming"' +
+    ' содержит хэштеги "web, coursera, javascript, script, programming"'
 );
 
 console.info('OK!');
